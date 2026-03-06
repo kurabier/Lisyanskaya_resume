@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj + some brand new features from Mary Feofanova
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{20pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{5pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      \textit{\small#5} \\
+    \end{tabular*}\vspace{5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{8pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-8pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\selectlanguage{russian}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Алина Лисянская} & Email\vspace{7pt}: \href{mailto:arlisyanskaya@edu.hse.ru}{arlisyanskaya@edu.hse.ru}\\
+  
+  Github: \href{https://github.com/kurabier/}{kurabier} & Телефон : +7\hspace{0.5ex}915\hspace{0.5ex}402\hspace{0.5ex}35\hspace{0.5ex}50 \\
+\end{tabular*}
+\vspace{9pt}
+
+%-----------EDUCATION-----------------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Национальный исследовательский вуз «Высшая школа экономики» (НИУ ВШЭ)}{Москва, Россия}
+        {ПМИ, компьютерные науки и анализ данных}{Сент. 2024 - Авг. 2028}{Бакалавр, 2 курс}
+    \resumeSubheading
+      {лицей НИУ ВШЭ}{Москва, Россия}
+        {информатика, математика и инженерия}{Сент. 2019 - Авг. 2021}{}
+  \resumeSubHeadingListEnd
+  
+\section{Проекты}
+  \resumeSubHeadingListStart
+    \resumeProjSubheading
+      {\href{https://kurabier.github.io/informatics_guide/informatics_guide.pdf}{Пособие для подготовки к ЕГЭ по информатике}}{}
+      {\skill{Latex} \skill{Overleaf} \skill{Git} \skill{Python} \skill{GitHub}}{ февраль 2026}
+          \resumeDesc{Разработала и сверстала в \textbf{LaTeX} с нуля учебное пособие для подготовки к ЕГЭ по информатике. Материал содержит теоретическую базу, ссылки на типовые задания и решения — как аналитические, так и с примерами кода на \textbf{Python}.}
+
+\textbf{Более подробно о проекте:}
+\begin{itemize}[leftmargin=*]
+    \item На базе пакета \texttt{listings} создала кастомизированный стиль для Python с подсветкой синтаксиса (\texttt{xcolor}), нумерацией строк и фоновым цветом для читаемости кода;
+    \item Настроила геометрию страницы (\texttt{geometry}), внедрила гиперссылки (\texttt{hyperref}) на задания. Локализовала на русский язык (\texttt{babel}) и настроила «Содержание» для документа;
+    \item Вела разработку в \textbf{Linux} с использованием \textbf{Bash-скриптов} для автоматизации сборки проекта. Настроила \textbf{Git} для контроля версий и организовала удаленное хранение на \textbf{GitHub}. Реализовала \textbf{GitHub Actions workflow} для автоматической компиляции \texttt{.tex} в \texttt{.pdf} при каждом обновлении;
+    \item Опубликовала готовое пособие на \textbf{GitHub Pages} — пользователи всегда имеют доступ к актуальной версии по постоянной ссылке, а любые изменения в репозитории обновляют документ автоматически.
+\end{itemize}
+          \resumeProjSubheading
+      {\href{https://kurabier.github.io/math_guides/math_guide.pdf}{Пособие для подготовки к ЕГЭ по профильной математике}}{}
+      {\skill{Latex} \skill{Overleaf} \skill{Git} \skill{Python} \skill{GitHub}}{Март 2026}
+          \resumeDesc{Разработала и сверстала в \textbf{LaTeX} учебное пособие для подготовки к ЕГЭ по профильной математике, ориентированное на планиметрию и векторы.}
+
+\textbf{Более подробно о проекте:}
+
+\begin{itemize}[leftmargin=*]
+    \item Создала геометрические иллюстрации с нуля, используя библиотеку \texttt{tikz} (включая библиотеки \texttt{trees} и \texttt{positioning}) для идеального качества изображений при печати и масштабировании. Настроила геометрию страницы (\texttt{geometry}) для удобного формата под печать (A4 с оптимизированными полями) и разбила материал на секции;
+    \item Активно использовала пакет \texttt{amsmath} для безупречного набора сложных формул, векторных выражений и систем уравнений;
+    \item Также использовала Linux и Git для разработки, GitHub — для хранения, GitHub Actions — для автоматической сборки.
+\end{itemize}
+      
+  \resumeSubHeadingListEnd
+%
+
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Учебный ассистент по курсу «Инструменты промышленной разработки»}{Москва, Россия}
+        {Национальный исследовательский вуз «Высшая школа экономики» (НИУ ВШЭ)}{Сент. 2025 - дек. 2025}{}
+    \resumeSubheading
+      {Репетитор по математике и информатике для старших классов}{Москва, Россия}
+        {Частное преподавание}{Сент. 2024 - now}{}
+    \resumeSubheading
+      {Преподаватель по шахматам в общеобразовательной школе}{Санкт-Петербург, Россия}
+        {«Онлайн-школа №1»}{Сент. 2022 - Авг. 2024}{}
+  \resumeSubHeadingListEnd
+%--------PROGRAMMING SKILLS------------
+\section{Навыки}
+ \resumeSubHeadingListStart
+  \item{
+     \textbf{Основное}{: Latex, Overleaf, Git, Python, Linux, Bash}
+   \item{
+     \textbf{Дополнительно}{: теория вероятностей, линейная алгебра, математический анализ, C++, SQL, matplotlib, numpy, pandas}
+   }
+   \vspace{0pt}
+   }
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
+
